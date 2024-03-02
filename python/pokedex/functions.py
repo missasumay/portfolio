@@ -142,7 +142,7 @@ def pokemon_details():
     global pokemon_name
     global name
 
-    choice = input("\nDo you want to search by NAME or ID? (Please use all caps) ")
+    choice = input("\nDo you want to search by NAME or ID? (Please use all caps) ").upper()
 
 
     if choice == "NAME":

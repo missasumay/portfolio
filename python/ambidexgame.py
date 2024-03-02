@@ -30,7 +30,7 @@ if pairing == "true":
     print(f"You are playing as a PAIR. Your partner is {Player_B}.")
     print(f"Your opponent is {Player_C}.\n")
 
-    for score in range(0, 100):
+    while player_score < 9 or opponent_score < 9 or player_score > -1 or opponent_score > -1:
         if player_score >= 9 or opponent_score >= 9:
             print("The game has concluded.")
             if player_score >= 9:
@@ -58,7 +58,7 @@ if pairing == "true":
                 
         else:
             print(f"It is your turn, {Player_A}. Do you wish to Ally or Betray {Player_C}?")
-            player_choice = input("Please provide your answer by typing either ALLY or BETRAY: ")
+            player_choice = input("Please provide your answer by typing either ALLY or BETRAY: ").upper()
 
             if player_choice != "ALLY" and player_choice != "BETRAY":
                 print("\n!!! Unknown command. Round will be skipped. !!!\n")
@@ -89,7 +89,7 @@ if pairing == "false":
     print(f"You are playing as a SOLO.")
     print(f"Your opponents are {Player_B} and {Player_C}.\n")
 
-    while player_score >= 9 or opponent_score >= 9 or player_score < 0 or opponent_score < 0:
+    while player_score < 9 or opponent_score < 9 or player_score > -1 or opponent_score > -1:
         if player_score >= 9 or opponent_score >= 9:
             print("The game has concluded.")
             if player_score >= 9:
@@ -117,7 +117,7 @@ if pairing == "false":
                 
         else:
             print(f"It is your turn, {Player_A}. Do you wish to Ally or Betray {Player_B} and {Player_C}?")
-            player_choice = input("Please provide your answer by typing either ALLY or BETRAY: ")
+            player_choice = input("Please provide your answer by typing either ALLY or BETRAY: ").upper()
 
             if player_choice != "ALLY" and player_choice != "BETRAY":
                 print("\n!!! Unknown command. Round will be skipped. !!!\n")
